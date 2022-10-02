@@ -2,11 +2,11 @@
 # Introduction
 ## Create a virtual env with Conda
 ```
-conda create -n intvenv
+conda create -n intenv
 ```
 ## Activate virtual env
 ```
-source activate intvenv
+source activate intenv
 ```
 ## Install a new version of Python
 ```
