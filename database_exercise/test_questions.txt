@@ -1,0 +1,242 @@
+Preguntas cortas (arquitectura SW) (11 ptos)
+¿Cuáles son algunos de los beneficios clave de utilizar TDD en el desarrollo de software?
+*
+1 punto
+Mayor velocidad en la codificación y menos necesidad de pruebas.
+Código más robusto, detección temprana de errores y documentación automática.
+Menos necesidad de pruebas de aceptación y mayor flexibilidad en los cambios de requisitos.
+En el ciclo TDD, ¿cuál es la primera fase después de escribir una prueba?
+*
+1 punto
+Refactorización
+Codificación
+Ejecución de pruebas
+Ninguna de las anteriores
+Cuando escribes una prueba en TDD, ¿qué deberías enfocarte en verificar?
+*
+1 punto
+Verificar que todas las funciones del sistema estén funcionando correctamente.
+Verificar que la funcionalidad específica que se está desarrollando cumple con los requisitos.
+Verificar que el código esté bien comentado y documentado.
+¿En qué fase del ciclo TDD se realiza la refactorización del código?
+*
+1 punto
+Al final del ciclo, después de escribir todas las pruebas y el código de producción.
+Antes de escribir las pruebas.
+Después de que todas las pruebas pasen y antes de escribir nuevas pruebas.
+¿Cuál es la diferencia clave entre las pruebas de integración y las pruebas unitarias en el contexto de una API REST desarrollada con TDD?
+*
+1 punto
+Las pruebas unitarias verifican unidades individuales de código, mientras que las pruebas de integración evalúan cómo interactúan las diferentes partes de la API.
+Las pruebas de integración evalúan la velocidad de la API, mientras que las pruebas unitarias verifican la funcionalidad de la API.
+Las pruebas unitarias prueban la interfaz de usuario, mientras que las pruebas de integración prueban el rendimiento de la API.
+¿Cómo puede TDD contribuir a la documentación efectiva de una API REST?
+*
+1 punto
+TDD genera automáticamente documentación Swagger.
+Las pruebas escritas en TDD pueden servir como ejemplos en la documentación.
+TDD no tiene relación con la documentación de API.
+Ejemplo de prueba unitaria en python sobre un API REST que valida si un número es primo
+
+
+*
+5 puntos
+
+¿Qué comando podemos utilizar para poner una imagen Docker a disposición de otros usuarios?
+*
+4 puntos
+docker run
+docker archive
+docker pull
+docker push
+Otro:
+(Seleccione todo lo que corresponda.) ¿Cuál de los siguientes comandos cambia los directorios en un Dockerfile?
+*
+4 puntos
+RUN cd /home/node/app
+WORKDIR /home/node/app
+HOME /home/node/app
+Ninguna
+(Seleccione todo lo que corresponda.) ¿Por qué necesitamos almacenamiento local para un contenedor Docker?
+*
+4 puntos
+Para compartir datos con el host
+Para almacenar los archivos temporales del navegador
+Para almacenar la imagen del contenedor
+Para almacenar los volcados de memoria producidos por los procesos
+Ninguna es correcta
+¿Qué hace el siguiente comando en el archivo Docker Compose?
+ports:
+    - target: 8000
+      published: 8080
+*
+4 puntos
+Mapea el puerto 8080 dentro del contenedor al puerto 8000 en el host Docker.
+La sintaxis del mapa de puertos no es correcta.
+Expone ambos puertos (8080 y 8000) del host al mundo.
+Asigna el puerto 8000 dentro del contenedor al puerto 8080 en el host Docker.
+Otro:
+¿Qué se puede eliminar con el comando docker rm?
+*
+4 puntos
+Contenedores
+Imágenes
+Tanto contenedores como imágenes
+Ninguno de los anteriores
+¿Cómo podemos pasar variables de entorno mientras creamos un contenedor a partir de una imagen Docker preconstruida?
+*
+4 puntos
+Creando un Dockerfile y usando la opción ENV
+Usando la opción -e al crear un contenedor Docker
+Usando la opción --environ
+Ninguno de los anteriores
+Tenemos que parar y borrar un contenedor en ejecución llamado stopme. ¿Cómo deben ordenarse los siguientes comandos?
+
+1 - docker ps -a
+2 - docker container rm stopme
+3 - docker container stop stopme
+*
+4 puntos
+2,1,3
+2,3,1
+3,2,1
+1,2,3
+Supongamos que ejecutas dos contenedores en la misma red Docker.
+El contenedor A expone una aplicación web en el puerto 8080, mientras que el contenedor B no expone nada.
+¿Qué afirmación sobre los contenedores es cierta?
+*
+4 puntos
+El contenedor A es accesible en https://localhost:8080. El Contenedor B no es accesible ni para el Contenedor A ni para localhost.
+El contenedor A es accesible en https://localhost:8080. El Contenedor B es accesible para el Contenedor A, pero no para localhost.
+El Contenedor A y el Contenedor B son accesibles entre sí, pero no para localhost.
+Los Contenedores A y B no son accesibles en localhost, y no pueden acceder el uno al otro.
+¿Qué afirmación describe mejor el Quórum?
+*
+4 puntos
+El quórum es el número mínimo de nodos que deben estar disponibles para que el clúster funcione correctamente.
+En el caso de 3 nodos gestores, el quórum es 3.
+Una de las mejores prácticas es mantener un número impar de gestores en el enjambre para soportar fallos en los nodos gestores.
+Escribir un archivo Docker para crear y copiar un directorio y construirlo usando módulos python
+*
+4 puntos
+FROM python:latest
+
+WORKDIR /ohr/src/app
+
+COPY requirements.txt ./
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY app/ .
+
+CMD ["python", "main.py"]
+
+
+¿Cómo se pueden ejecutar varios contenedores con un solo servicio?
+*
+4 puntos
+Utilizando docker-compose, puedes ejecutar múltiples contenedores utilizando un único servicio.
+Todos los archivos de docker-compose utilizan lenguaje yaml.
+Integrandolos con jenkins
+Creando un script en linux
+
+Objetivo
+
+Desarrollar un programa en Python (my_dog_images_project) que descargue 50 imágenes aleatorias de perros desde la API https://dog.ceo/api/breeds/image/random , utilizando multithreading con más de 10 hilos concurrentes, y medir el tiempo de ejecución del proceso.
+
+¿Qué buscamos?
+Tu capacidad de análisis
+
+Tu calidad de codificación
+
+La estructura de tu repo y la documentación de ayuda.
+
+Tus conocimientos de repositorios de datos SQL y noSQL (puedes usar noSQL si quieres subir nota después de haber resuelto el problema con SQL)
+
+Tus conocimientos de almacenamiento en repositorios NoSQL
+
+Tu velocidad de desarrollo y despliegue 
+
+Requisitos
+
+* Descargar y guardar las imágenes en una carpeta local llamada images.
+* Guardar las url en una bbdd SQL 
+
+* Medir y mostrar el tiempo total de ejecución del proceso de descarga.
+
+Pautas
+
+* El programa debe crear más de 10 hilos concurrentes.
+
+* Cada hilo debe descargar una imagen y guardarla en la carpeta images.
+
+* Nombrar las imágenes de manera secuencial, por ejemplo, image_1.jpg, image_2.jpg, etc.
+
+* Manejar adecuadamente los posibles errores de red o de la API.
+
+Evaluación
+
+* Se evaluará la eficiencia del programa 
+
+* el manejo correcto de multithreading 
+
+* la robustez del código para manejar posibles errores
+
+* Pruebas unitarias
+
+
+Se debe usar la siguiente Tecnología:
+Lenguaje: Python, SQL / postgreSQL
+
+Uso de SQL
+
+Objetivo:
+
+Crear una base de datos de chistes en SQL utilizando tres Tablas que tienen relaciones entre ellas.
+
+Estructura de datos:
+
+La base de datos tendrá tres colecciones:
+
+- Chistes: Contiene los chistes. Cada chiste tiene un título, un cuerpo y un autor.
+
+- Usuarios: Contiene los usuarios que crean los chistes. Cada usuario tiene un nombre y una contraseña.
+
+- Temáticas: Contiene las temáticas de los chistes. Cada temática tiene un nombre.
+
+Relaciones entre colecciones:
+
+* Chistes: Un chiste puede tener varias temáticas asociadas.
+
+
+* Usuarios: Un usuario puede crear varios chistes.
+
+
+
+Indica las instrucciones en SQL para crear dicho modelo de datos en el orden apropiado para ejecutarlas.
+
+(Puedes indicar también un repo que contenga el archivo SQL listo para ejecutar.)
+
+Uso de los datos en SQL.
+
+* Crea el usuario Manolito, Pepe, Isabel y Pedro
+
+* Crea las tematicas “humor negro”, “humor amarillo”, “chistes verdes”
+
+* Crea 3 chistes para cada temática por cada usuario
+
+Realiza consultas:
+
+* Consulta 1: Saca todos los chistes creados por el usuario “Manolito”
+
+* Consulta 2: Saca todos los chistes de la temática “Humor negro”
+
+* Consulta 3: Saca todos los chistes de la temática  “Humor negro” creados por el usuario “Manolito”
+A partir del ejercicio de Python para recoger imágenes de perros anterior, crea un api rest en python usando fastapi (u otro framework) donde se le solicite un numero de imágenes por al usuario y  que utilice AWS lambda con my_dog_images_project, guardando las imágenes en un bucket de S3. 
+Adjunta el enlace al repositorio publico para poder evaluarlo.
+Documenta como consideres apropiado.
+Indica las configuraciones que fueran pertinentes en AWS.
+
+Genera las pruebas unitarias que consideres necesarias al API REST.
+Indica la carpeta donde se encuentran en el REPO del ejercicio anterior.
+*
